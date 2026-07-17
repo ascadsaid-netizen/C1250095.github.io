@@ -1,0 +1,481 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff;
+    color: #003366;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #003366;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: all 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #99ccff;
+    border-bottom: 2px solid #99ccff;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 51, 102, 0.2);
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid #b3d9ff;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #4a7a9c;
+    margin-bottom: 1.5rem;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), 
+                url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&h=400&fit=crop');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 51, 102, 0.2);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 2.5rem;
+    border-radius: 20px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #003366;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #003366;
+    color: white;
+    padding: 0.8rem 2.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.2);
+}
+
+.btn:hover {
+    background: #001a33;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 51, 102, 0.3);
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.1);
+    flex: 1 1 250px;
+    max-width: 320px;
+    border: 2px solid #b3d9ff;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 51, 102, 0.2);
+}
+
+.feature-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+    border: 2px solid #b3d9ff;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.gallery, .gallery-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.gallery figure, .gallery-main figure {
+    background: white;
+    padding: 0.8rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b3d9ff;
+    transition: all 0.3s;
+    width: 280px;
+}
+
+.gallery figure:hover, .gallery-main figure:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 51, 102, 0.2);
+}
+
+.gallery img, .gallery-main img {
+    border-radius: 8px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #003366;
+    font-weight: 500;
+}
+
+.home-gallery {
+    margin-top: 2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 2px solid #b3d9ff;
+}
+
+.home-gallery .gallery figure {
+    width: 250px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background: #003366;
+    color: white;
+    padding: 0.8rem 1rem;
+    font-weight: bold;
+}
+
+td {
+    padding: 0.8rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e6f2ff;
+}
+
+tr:nth-child(even) {
+    background: #e6f2ff;
+}
+
+tr:hover {
+    background: #b3d9ff;
+    transition: background 0.3s;
+}
+
+tfoot {
+    background: #b3d9ff;
+    font-weight: bold;
+}
+
+tfoot td {
+    border-top: 2px solid #003366;
+}
+
+.external-link {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.external-link a {
+    color: #003366;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+
+.external-link a:hover {
+    color: #001a33;
+}
+
+form fieldset {
+    background: white;
+    border: 2px solid #003366;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.1);
+}
+
+legend {
+    color: #003366;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 0 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: #003366;
+}
+
+input, select, textarea {
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 2px solid #b3d9ff;
+    width: 100%;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #003366;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.3rem;
+}
+
+.help-section {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    border: 2px solid #b3d9ff;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 51, 102, 0.05);
+}
+
+.help-section h3 {
+    color: #003366;
+    border-bottom: 2px solid #b3d9ff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.help-section ul, .help-section ol {
+    padding-left: 1.5rem;
+}
+
+.help-section li {
+    margin: 0.8rem 0;
+    color: #003366;
+}
+
+.help-section li p {
+    margin-top: 0.3rem;
+    color: #4a7a9c;
+    padding-left: 0.5rem;
+}
+
+.help-section ol li {
+    margin: 0.5rem 0;
+}
+
+.contact-help {
+    background: #e6f2ff;
+    border-color: #003366;
+}
+
+.contact-help ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-help li {
+    padding: 0.3rem 0;
+}
+
+.about-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 2px solid #b3d9ff;
+    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-box p {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #e6f2ff;
+}
+
+.about-box p:last-child {
+    border-bottom: none;
+}
+
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    nav ul {
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    
+    .hero {
+        padding: 2rem 1rem;
+        min-height: 300px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content {
+        padding: 1.5rem;
+    }
+    
+    .feature-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .gallery figure, .gallery-main figure {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .home-gallery .gallery figure {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    form fieldset {
+        padding: 1rem;
+    }
+    
+    table {
+        font-size: 0.8rem;
+    }
+    
+    th, td {
+        padding: 0.4rem 0.3rem;
+    }
+    
+    .help-section {
+        padding: 1rem;
+    }
+}
